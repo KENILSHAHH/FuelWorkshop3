@@ -40,10 +40,11 @@ function App() {
   };
 
   const getCount = async () => {
+    const amountToPass = 100
     if (window.fuel && account) {
       const wallet = await window.fuel.getWallet(account);
       const contract = CounterContractAbi__factory.connect(CONTRACT_ID, wallet);
-      const { value } = await contract.functions.count().simulate();
+      const { value } = await contract.functions.count(amountToPass).simulate();
       setCount(value.toNumber());
     }
   };
@@ -69,6 +70,14 @@ function App() {
       {connected ? (
         <div>
           <p>Counter: {count}</p>
+        <form>
+  <label>
+              Enter Amount in Gwei
+              
+    <input  type="text" name="Enter Amount in Gwei" />
+  </label>
+
+</form>
           <button onClick={increment}> Increment </button>
         </div>
       ) : (

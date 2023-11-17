@@ -1,6 +1,6 @@
 [[package]]
 name = 'core'
-source = 'path+from-root-63B5D95B29B128A3'
+source = 'path+from-root-98B5D95B29B128D4'
 
 [[package]]
 name = 'counter-contract'
