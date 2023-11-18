@@ -3,7 +3,7 @@ import './App.css';
 import { CounterContractAbi__factory } from './contracts';
 
 const CONTRACT_ID =
-  '0xf71eae5c832bb873e13538a2b1440de4bc5ee46cf1fea8a424c0cb1c6b127fc5';
+  '0x32fa3064fb85043fb6b28ee21ca22615679760b5006a451eb97c2f297ae777d9';
 
 function App() {
   const [account, setAccount] = useState<string>();
